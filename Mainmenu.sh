@@ -13,13 +13,6 @@ dbsScreen=true;
 		select choice in "Create a new database" "Use existing Database" "Drop Database" "Back" "Show dbs"; do 
 		case $REPLY in
 			1 ) #Create a database
-
-				# if ! [[  -e `pwd`/DB ]]; then
-				# 	mkdir -p ./DataBases
-				# fi
-				# cd ./DB/
-			
-
 				separator;
 				createDb;
 
@@ -36,14 +29,10 @@ dbsScreen=true;
 				# dropDb;
 				;;
 			4 ) # Back
-				cd ..
-				# welcomeScreen=true
-				# dbsScreen=false
-				# tablesScreen=false
-				;;
+break;;			
 				5) #showDatabases
-				# ShowDBS;
-			. ./ShowDBS.sh;
+				
+			./ShowDBS.sh;
 	 	echo -e "\e[42mDatabase is loading...\e[0m"
 				echo press any key
 				read
