@@ -7,6 +7,7 @@ function createDb {
 	echo enter the name of the database please
 	read dbname
 
+
 	
 	#############
 	# null entry
@@ -19,7 +20,8 @@ function createDb {
 	# new DB
 	elif [[ $dbname =~ ^[a-zA-Z] ]]; then
 		mkdir -p Databases/"$dbname"
-		cd "Databases/$dbname" > /dev/null 2>&1
+		# cd "Databases/$dbname" > /dev/null 2>&1
+		# export $dbname
 		newloc=`pwd`
 		# echo newloc;
 		if [[ "$newloc" = `pwd` ]]; then

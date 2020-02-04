@@ -2,7 +2,7 @@
 
 operations(){
     echo "Operations on table"
-    select ch in "creat table" "delete table" "insert" "select all from table" "select row";
+    select ch in "creat table" "list tables" "insert into table" "select all from table" "select row" "back";
     do
         case $ch in
             "creat table")
@@ -11,14 +11,14 @@ operations(){
                 creatTable
                 break
                 ;;
-            "delete table" )
-                echo "delete table"
+            "list tables" )
+                echo "list tables"
                 clear
-                deleteTable
+                listTables
                 break
                 ;;
-            "insert")
-                echo "insert"
+            "insert into table")
+                echo "insert into table"
                 clear
                 insertIntoTable
                 break
@@ -34,6 +34,12 @@ operations(){
                 echo "select row"
                 clear
                 selectRecord
+                break
+                ;;
+            "back")
+                echo "back"
+                clear
+                . ./Mainmenu.sh
                 break
                 ;;
             *)

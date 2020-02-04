@@ -5,19 +5,16 @@ clear;
 . ./ShowDBS.sh
 . ./MakeDB.sh
 . ./operations.sh
-. ./deleteTable.sh
+. ./listTables.sh
 . ./creatTable.sh
 . ./insertIntoTable.sh
 . ./selectAllFromTable.sh
-
+. ./DropDatabases.sh
 ################################################################################
 # Databases Screen
 while $dbsScreen; do
     PS3="dbscreen>"
     clear;
-    . ./MakeDB.sh
-    . ./ShowDBS.sh;
-    . ./DropDatabases.sh
     separator;
     echo -e "\t\tYour Existing Databases:\n$(find -maxdepth 1 -type d | cut -d'/' -f2 | sed '1d')"
     separator;
