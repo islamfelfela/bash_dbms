@@ -32,6 +32,7 @@ while $dbsScreen; do
                 read
             ;;
             2 ) # Use existing
+				useDB
                 # separator;
                 # useExistingDb;
             ;;

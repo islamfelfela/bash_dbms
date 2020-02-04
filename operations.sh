@@ -2,35 +2,35 @@
 
 operations(){
     echo "Operations on table"
-    select ch in "creat table" "delete table" "insert" "select all" "select row";
+    select ch in "creat table" "delete table" "insert" "select all from table" "select row";
     do
         case $ch in
-            1)
+            "creat table")
                 echo "creat table"
                 clear
                 creatTable
                 break
                 ;;
-            2)
+            "delete table" )
                 echo "delete table"
                 clear
                 deleteTable
                 break
                 ;;
-            3)
+            "insert")
                 echo "insert"
                 clear
                 insertIntoTable
                 break
                 ;;
-            3)
+            "select all from table")
                 echo "select all"
                 clear
                 selectAllFromTable
                 break
                 ;;
             
-            4)
+            "select row")
                 echo "select row"
                 clear
                 selectRecord
