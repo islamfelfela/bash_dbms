@@ -1,9 +1,13 @@
-DBs=`pwd`;
-if [ -d $Databases ]; then
-     # body
-      ls DataBases/$DBs
+function ShowDBS {
 
-else
-     # body
-     printf "Sorry ,there is no Databases here "
-fi
+
+for Databases in `ls Databases/`
+do
+echo $Databases
+done
+
+
+
+}
+ShowDBS
+
