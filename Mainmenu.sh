@@ -13,6 +13,8 @@ clear;
 ################################################################################
 # Databases Screen
 while $dbsScreen; do
+## Make directory to hold all databases when run project
+ mkdir -p Databases;
     PS3="dbscreen>"
     clear;
     separator;
