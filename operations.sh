@@ -1,8 +1,11 @@
 #! /bin/bash
 
+
 operations(){
     echo "Operations on table"
-    select ch in "creat table" "list tables" "insert into table" "select all from table" "select row" "back";
+     while true
+     do 
+        select ch in "creat table" "list tables" "insert into table" "select all from table" "select row" "back";
     do
         case $ch in
             "creat table")
@@ -39,7 +42,8 @@ operations(){
             "back")
                 echo "back"
                 clear
-                . ./Mainmenu.sh
+             #/home/felfela/Desktop/bash_dbms/Mainmenu.sh
+                Mainmenu
                 break
                 ;;
             *)
@@ -48,4 +52,7 @@ operations(){
 
         esac
     done
+    operations
+     done
+    
 }
