@@ -13,7 +13,7 @@ useDB(){
                 operations
             else
                 echo "NO DataBase Exist With That Name, Enter Valid Name"
-                . ./Mainmenu.sh
+                /Mainmenu
         fi
         else
             echo " Enter Valid DB Name"
