@@ -14,9 +14,10 @@ creatTable(){
                     else
                         if [[ $tableName =~ ^-?[a-zA-Z]+$ ]]
                         then
+                            export $tableName
                             echo $tableName
                             echo $liveDB
-                            touch /home/felfela/Desktop/bash_dbms/Databases/$liveDB/$tablemName
+                            touch /home/felfela/Desktop/bash_dbms/Databases/$liveDB/$tablemName.txt
                             touch $tablemName.md
                             echo "Created..."
 
