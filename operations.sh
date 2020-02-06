@@ -3,15 +3,15 @@
 
 operations(){
     echo "Operations on table"
-     while true
-     do 
+    while true
+    do 
         select ch in "creat table" "list tables" "insert into table" "select all from table" "select row" "back";
     do
         case $ch in
             "creat table")
                 echo "creat table"
                 clear
-                # creatTable
+                creatTable
                 break
                 ;;
             "list tables" )
@@ -42,7 +42,6 @@ operations(){
             "back")
                 echo "back"
                 clear
-             #/home/felfela/Desktop/bash_dbms/Mainmenu.sh
                 Mainmenu
                 break
                 ;;

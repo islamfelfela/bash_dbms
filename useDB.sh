@@ -1,5 +1,6 @@
 #! /bin/bash
-. ./operations.sh
+#. ./operations.sh
+
 useDB(){
      read -p "Enter DB Name : " liveDB
      if [[ -n $liveDB ]]

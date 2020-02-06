@@ -13,10 +13,12 @@ creatTable(){
                     echo "table Exist"
                     elif [[ $tableName =~ ^-?[a-zA-Z]+$ ]]
                         then
-                            echo $tableName
+                            export $tableName
                             touch $tableName
-                            touch $tablemName.md
+                            touch "$tableName.md"
+                            echo $tableName
                             echo "Created..."
+                            getcolnames
                             break;
                         else
                             echo "Enter string name"
@@ -30,4 +32,4 @@ creatTable(){
 
 
 }
-creatTable
+# creatTable
