@@ -18,7 +18,7 @@ creatTable(){
                             touch "$tableName.md"
                             echo $tableName
                             echo "Created..."
-                            getcolnames
+                            getcolnames #function in temp.sh
                             break;
                         else
                             echo "Enter string name"
