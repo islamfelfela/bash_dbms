@@ -11,7 +11,7 @@ operations(){
             "creat table")
                 echo "creat table"
                 clear
-                creatTable
+                # creatTable
                 break
                 ;;
             "list tables" )
