@@ -1,6 +1,6 @@
 #! /bin/bash
 
-
+. ./insertIntoTable.sh
 operations(){
     echo "Operations on table"
     while true
@@ -17,13 +17,13 @@ operations(){
             "list tables" )
                 echo "list tables"
                 clear
-                listTables
+                listeTables
                 break
                 ;;
             "insert into table")
                 echo "insert into table"
                 clear
-                insertIntoTable
+                insertData
                 break
                 ;;
             "select all from table")

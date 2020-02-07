@@ -3,16 +3,18 @@
 Mainmenu(){
 
 clear;
-. ./useDB.sh
 . ./ShowDBS.sh
 . ./MakeDB.sh
+. ./useDB.sh
 . ./operations.sh
-. ./listTables.sh
 . ./creatTable.sh
+. ./creatMD.sh
+. ./listTables.sh
 . ./insertIntoTable.sh
 . ./selectAllFromTable.sh
 . ./DropDatabases.sh
-. ./temp.sh
+
+
 ################################################################################
 # Databases Screen
 while $dbsScreen;

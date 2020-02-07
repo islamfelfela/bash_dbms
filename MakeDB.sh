@@ -4,8 +4,7 @@ function separator {
     echo -e "\n************************************************************\n";
 }
 function createDb {
-    echo please enter the name of the database
-    read dbname
+    read -p "please enter the name of the database : " dbname
     
     
     #############
