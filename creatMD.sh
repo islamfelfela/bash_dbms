@@ -20,7 +20,7 @@ function createMetaData {
 			while $validMetaData;
             do
 				echo -e "\e[44menter primary key name\e[0m"
-				read pk_name
+				read -e pk_name
 				# Handle null entry
 				if [[ $pk_name = "" ]]; 
                 then
@@ -74,7 +74,7 @@ function createMetaData {
 				validMetaData=true
 				while $validMetaData; do
 					echo -e "\e[46menter field $[i+1] name\e[0m"
-					read field_name
+					read -e field_name
 					# null entry
 					if [[ $field_name = "" ]]; then
 						echo -e "\e[41minvalid entry, please enter a correct name\e[0m"

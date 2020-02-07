@@ -5,6 +5,8 @@ operations(){
     echo "Operations on table"
     while true
     do
+        PS3="TableScreen> "
+
         select ch in "creat table" "list tables" "insert into table" "select all from table" "select row" "delete row" "delete table" "back";
         do
             case $ch in

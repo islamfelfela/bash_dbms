@@ -3,16 +3,21 @@
 Mainmenu(){
 
 clear;
+. ./useDB.sh
 . ./ShowDBS.sh
 . ./MakeDB.sh
-. ./useDB.sh
 . ./operations.sh
-. ./creatTable.sh
-. ./creatMD.sh
 . ./listTables.sh
+. ./creatTable.sh
 . ./insertIntoTable.sh
 . ./selectAllFromTable.sh
 . ./DropDatabases.sh
+. ./getcols.sh
+. ./creatMD.sh
+. ./selectRecord.sh
+. ./deleteRow.sh
+. ./deleteTable.sh
+
 
 
 ################################################################################
