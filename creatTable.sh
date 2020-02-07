@@ -4,8 +4,7 @@ creatTable(){
 
 
 		# Table Name
-		echo Enter Table Name
-		read dbtable
+		read -p "Enter Table Name : "dbtable
 
 		# handle Null Entry
 		if [[ $dbtable = "" ]]; then
@@ -21,7 +20,7 @@ creatTable(){
 
 		# table name exists
 		elif [[ -e "$dbtable" ]]; then
-			echo -e "\e[41mthis table name exists\e[0m"
+			echo -e "\e[41m Table exists\e[0m"
 			echo press any key
 			read
 			# break
