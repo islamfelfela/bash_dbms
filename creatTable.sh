@@ -4,7 +4,7 @@ creatTable(){
 
 
 		# Table Name
-		read -p "Enter Table Name : "dbtable
+		read -p "Enter Table Name : " dbtable
 
 		# handle Null Entry
 		if [[ $dbtable = "" ]]; then
