@@ -19,8 +19,6 @@ function insertData {
 
 			read
 			# match data & size
-			check_type=$(check_dataType "$REPLY" "$dbtable" 1)
-			check_size=$(check_size "$REPLY" "$dbtable" 1)
 			#=> print all records except first record
 			pk_used=$(cut -d ':' -f1 "$dbtable" | awk '{if(NR != 1) print $0}' | grep -x -e "$REPLY") 
 
@@ -58,9 +56,6 @@ function insertData {
 						echo -e "enter \"\e[44m$(head -1 "$dbtable" | cut -d ':' -f$i | awk -F "-" 'BEGIN { RS = ":" } {print $1}')\e[0m\" of type \e[44m$(head -1 "$dbtable" | cut -d ':' -f$i | awk -F "-" 'BEGIN { RS = ":" } {print $2}')\e[0m and size \e[44m$(head -1 "$dbtable" | cut -d ':' -f$i | awk -F "-" 'BEGIN { RS = ":" } {print $3}')\e[0m"
 
 						read
-						# match data with its col datatype & size
-						check_type=$(check_dataType "$REPLY" "$dbtable" "$i")
-						check_size=$(check_size "$REPLY" "$dbtable" "$i")
 
 						# not matching datatype
 						if [[ "$check_type" == 0 ]]; then

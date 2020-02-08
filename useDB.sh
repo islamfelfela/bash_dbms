@@ -20,9 +20,9 @@ useDB(){
 
         elif ! [[ -d "Databases/$liveDB" ]]; 
         then
-                echo -e "\e[41minvalid entry..\e[0m"
-                read
-                break
+            echo -e "\e[41minvalid entry..\e[0m"
+            read
+            break
                
         else
                 export $liveDB
