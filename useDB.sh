@@ -2,23 +2,41 @@
 #. ./operations.sh
 
 useDB(){
+
+    while true
+    do
+
      read -p "Enter DB Name : " liveDB
-     if [[ -n $liveDB ]]
-     echo $liveDB
+     if [[ $liveDB == "" ]]
      then
-        if ! [[ -d bash_dbms/Databases/$liveDB ]]
-            then
-                echo "exist"
+            echo -e "\e[41minvalid entry..\e[0m"
+            read
+            break
+        elif [[ ! $liveDB =~ [[:alnum:]] ]]
+        then
+            echo -e "\e[41minvalid entry..\e[0m"
+            read
+            break
+
+        elif ! [[ -d "Databases/$liveDB" ]]; 
+        then
+                echo -e "\e[41minvalid entry..\e[0m"
+                read
+                break
+               
+        else
                 export $liveDB
                 cd Databases/$liveDB
                 operations
-            else
-                echo "NO DataBase Exist With That Name, Enter Valid Name"
-                Mainmenu
-        fi
-        else
-            echo " Enter Valid DB Name"
-        useDB
-
+                # echo "passed"
      fi
+   
+
+    done
+     
 }
+
+
+
+
+####   insert -> 
