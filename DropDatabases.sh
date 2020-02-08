@@ -9,7 +9,7 @@ function dropDb {
     if [[ "Databases/$db" = '' ]]; then
         echo -e "\e[41minvalid entry, please enter a correct name\e[0m"
         echo press any key
-        read
+        read -e
         
         elif  [[ -d Databases/"$db" ]]; then
       
