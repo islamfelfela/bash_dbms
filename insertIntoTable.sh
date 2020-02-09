@@ -1,6 +1,6 @@
 #! /bin/bash
 
-function checkDataType {
+function check_dataType {
 	datatype=$(head -1 $2 | cut -d ':' -f$3 | awk -F "-" 'BEGIN { RS = ":" } {print $2}')
 	if [[ "$1" = '' ]]; then
 		echo 1
@@ -12,7 +12,7 @@ function checkDataType {
 			echo 1
 		else
 			# datatype string and input is integer
-			echo 1
+			echo 0
 		fi
 	else
 		if [[ $datatype == integer ]]; then

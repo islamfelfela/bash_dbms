@@ -8,7 +8,7 @@ function createMetaData {
             do
 				echo -e "\e[44mhow many columns you want?\e[0m"
 				read -e num_col
-				if [[ "$num_col" = +([1-9])*([0-9]) ]];
+				if [[ "$num_col" == +([1-9])*([0-9]) ]];
                 then
 					validMetaData=false
 				else
