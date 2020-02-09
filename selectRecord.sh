@@ -3,13 +3,13 @@ function displayRow {
 	##########
 	# choose table
 	echo enter name of the table
-	read dbtable
+	read -e dbtable
 	##########
 	# not exist
 	if ! [[ -f "$dbtable" ]]; then
 		echo -e "\e[41mthis table doesn't exist\e[0m"
 		echo press any key
-		read
+		read -e
 	else
 		##########
 		## table exists
@@ -46,6 +46,6 @@ function displayRow {
 			separator;
 		fi
 		echo press any key
-		read
+		read -e
 	fi
 }

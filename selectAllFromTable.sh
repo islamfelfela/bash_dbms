@@ -4,12 +4,12 @@
 function selectAllFromTable {
 	# choose table
 	echo enter name of the table
-	read dbtable
+	read -e dbtable
 	# not exist
 	if ! [[ -f "$dbtable" ]]; then
 		echo -e "\e[41mthis table doesn't exist\e[0m"
 		echo press any key
-		read
+		read -e
 	else
 		
 		## table exists
@@ -20,6 +20,6 @@ function selectAllFromTable {
 		echo -e "\n------------------------------------------------------------"
 		sed '1d' "$dbtable" | awk -F: 'BEGIN{OFS="\t"} {for(n = 1; n <= NF; n++) $n=$n}  1'
 		echo $'\n'press any key
-		read
+		read -e
 	fi
 }

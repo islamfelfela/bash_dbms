@@ -39,7 +39,7 @@ do
                 createDb;
                 echo -e "\e[42mDatabase is loading...\e[0m"
                 echo press any key
-                read
+                read -e
                 ;;
 
             2 ) # Use existing
@@ -65,12 +65,12 @@ do
                 ShowDBS;
                 echo -e "\e[42mDatabase is loading...\e[0m"
                 echo press any key
-                read
+                read -e
                 ;;
             * )
                 echo -e "\e[41minvalid entry\e[0m"
                 echo press any key
-                read
+                read -e
                 ;;
         esac
         break

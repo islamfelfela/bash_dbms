@@ -7,7 +7,7 @@ function createMetaData {
 			while $validMetaData;
             do
 				echo -e "\e[44mhow many columns you want?\e[0m"
-				read num_col
+				read -e num_col
 				if [[ "$num_col" = +([1-9])*([0-9]) ]];
                 then
 					validMetaData=false
@@ -59,7 +59,7 @@ function createMetaData {
 			validMetaData=true
 			while $validMetaData; do
 				echo -e "\e[44menter primary key size\e[0m"
-				read size
+				read -e size
 				if [[ "$size" = +([1-9])*([0-9]) ]]; then
 					echo -n "$size" >> "$dbtable"
 					echo -n ":" >> "$dbtable"
@@ -120,7 +120,7 @@ function createMetaData {
 							echo $'\n' >> "$dbtable"
 							echo -e "\n\e[42mtable created successfully\e[0m"
 							echo press any key
-							read
+							read -e
 						# next column
 						else
 							echo -n ":" >> "$dbtable"
@@ -134,6 +134,6 @@ function createMetaData {
 		else
 			echo -e "\e[41minvalid entry\e[0m" 
 			echo press any key
-			read
+			read -e
 		fi
 }

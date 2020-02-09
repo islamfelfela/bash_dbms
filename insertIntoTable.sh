@@ -39,7 +39,7 @@ function insertData {
 	##########
 	# choose the table
 	echo enter the name of the table
-	read dbtable
+	read -e dbtable
 	##########
 	# not exist
 	if ! [[ -f "$dbtable" ]]; then
@@ -138,6 +138,6 @@ function insertData {
 			fi
 		done
 		echo press any key
-		read
+		read -e
 	fi
 }

@@ -6,13 +6,13 @@ function deleteTable {
 	if ! [[ -f "$dbtable" ]]; then
 		echo -e "\e[41mthis table doesn't exist\e[0m"
 		echo press any key
-		read
+		read -e
 	##########
 	# exists
 	else
 		rm "$dbtable"
 		echo -e "\e[42mtable deleted\e[0m"
 		echo press any key
-		read
+		read -e
 	fi
 }

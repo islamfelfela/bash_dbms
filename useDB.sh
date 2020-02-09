@@ -5,23 +5,23 @@ useDB(){
 
     while true
     do
-
-     read -p "Enter DB Name : " liveDB
+echo "Enter Database Name"
+     read -e liveDB
      if [[ $liveDB == "" ]]
      then
             echo -e "\e[41minvalid entry..\e[0m"
-            read
+            read -e
             break
         elif [[ ! $liveDB =~ [[:alnum:]] ]]
         then
             echo -e "\e[41minvalid entry..\e[0m"
-            read
+            read -e
             break
 
         elif ! [[ -d "Databases/$liveDB" ]]; 
         then
             echo -e "\e[41minvalid entry..\e[0m"
-            read
+            read -e
             break
                
         else
@@ -39,4 +39,3 @@ useDB(){
 
 
 
-####   insert -> 

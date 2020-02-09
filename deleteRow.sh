@@ -13,7 +13,7 @@ function deleteRow
 	if ! [[ -f "$dbtable" ]]; then
 		echo -e "\e[41mthis table doesn't exist\e[0m"
 		echo press any key
-		read
+		read -e
 	else
 		##########
 		# if table exists
@@ -21,7 +21,7 @@ function deleteRow
 		# enter primary key
 		echo -e "enter primary key \"\e[44m$(head -1 "$dbtable" | cut -d ':' -f1 | awk -F "-" 'BEGIN { RS = ":" } {print $1}')\e[0m\" of type \e[44m$(head -1 "$dbtable" | cut -d ':' -f1 | awk -F "-" 'BEGIN { RS = ":" } {print $2}')\e[0m and size \e[44m$(head -1 "$dbtable" | cut -d ':' -f1 | awk -F "-" 'BEGIN { RS = ":" } {print $3}')\e[0m" of the record to delete
 		
-		read
+		read -e
 		#########
 		# get Number of record
 		recordNum=$(cut -d ':' -f1 "$dbtable" | awk '{if(NR != 1) print $0}'	| grep -x -n -e "$REPLY" | cut -d':' -f1)
@@ -43,6 +43,6 @@ function deleteRow
 			echo -e "\e[42mrecord deleted successfully\e[0m"
 		fi
 		echo press any key
-		read
+		read -e
 	fi
 }

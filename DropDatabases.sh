@@ -3,7 +3,7 @@
 function dropDb {
     separator;
     echo enter the name of the database
-    read db
+    read -e db
     #db="$db"
     
     if [[ "Databases/$db" = '' ]]; then
@@ -17,11 +17,11 @@ function dropDb {
         rm -r  Databases/$db
         echo -e "\e[42m$db removed from your databases\e[0m"
         echo press any key
-        read
+        read -e
     else
          echo -e "\e[41mthis database doesn't exist\e[0m"
         echo press any key
-        read
+        read -e
         #finally remove Database
     fi
 }
